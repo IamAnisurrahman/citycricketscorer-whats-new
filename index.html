@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What's New</title>
+  <title>What's New & Tutorial</title>
   <style>
     * {
       box-sizing: border-box;
@@ -20,9 +20,9 @@
     .update-card {
       background-color: #132b23;
       border: 1px solid #1f473a;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 16px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .badge {
       display: inline-block;
@@ -30,10 +30,13 @@
       color: #ffffff;
       font-size: 11px;
       font-weight: 700;
-      padding: 2px 8px;
+      padding: 3px 8px;
       border-radius: 4px;
       text-transform: uppercase;
       margin-bottom: 8px;
+    }
+    .badge-video {
+      background-color: #e11d48;
     }
     .version-title {
       font-size: 17px;
@@ -57,11 +60,45 @@
     li strong {
       color: #ffffff;
     }
+    /* Video Container */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      margin: 12px 0 14px 0;
+      background-color: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #00875a;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 10px 0;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .video-btn:active {
+      background-color: #006b47;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Version 8.6 Update -->
+  <!-- Version 8.6 Updates Card -->
   <div class="update-card">
     <span class="badge">Latest</span>
     <div class="version-title">Version 8.6 Update</div>
@@ -72,6 +109,26 @@
       <li><strong>Instant Branded Splash Screen:</strong> Seamless, flicker-free startup with signature green background and logo.</li>
       <li><strong>Performance & Stability:</strong> Faster scorecard rendering and memory optimizations.</li>
     </ul>
+  </div>
+
+  <!-- How to Use Tutorial Card -->
+  <div class="update-card">
+    <span class="badge badge-video">Video Guide</span>
+    <div class="version-title">How to Use City Cricket Scorer</div>
+    <div class="release-date">Step-by-step match scoring tutorial</div>
+
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/UXPFvbLWvFU" 
+        title="How to use City Cricket Scorer Application" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <a href="https://youtu.be/UXPFvbLWvFU" class="video-btn" target="_blank">
+      Watch on YouTube
+    </a>
   </div>
 
 </body>
