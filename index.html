@@ -20,9 +20,16 @@
     .update-card {
       background-color: #132b23;
       border: 1px solid #1f473a;
-      border-radius: 12px;
+      border-left: 4px solid #00875a;
+      border-radius: 10px;
       padding: 16px;
       margin-bottom: 16px;
+      overflow: visible;
+    }
+    .badge-container {
+      display: flex;
+      justify-content: flex-start; /* Aligns badge to the left */
+      margin-bottom: 8px;
     }
     .badge {
       display: inline-block;
@@ -30,10 +37,10 @@
       color: #ffffff;
       font-size: 11px;
       font-weight: 700;
-      padding: 3px 8px;
+      padding: 3px 9px;
       border-radius: 4px;
       text-transform: uppercase;
-      margin-bottom: 8px;
+      letter-spacing: 0.5px;
     }
     .badge-guide {
       background-color: #0284c7;
@@ -63,31 +70,22 @@
     .card-desc {
       font-size: 13.5px;
       color: #94a3b8;
-      margin-bottom: 14px;
+      margin: 8px 0 14px 0;
+      line-height: 1.5;
     }
-    /* YouTube Button */
     .yt-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
+      display: block;
       width: 100%;
+      box-sizing: border-box;
       background-color: #cc0000;
-      color: #ffffff;
+      color: #ffffff !important;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 14px;
-      padding: 12px 0;
+      padding: 12px;
       border-radius: 8px;
-      transition: background 0.2s;
-    }
-    .yt-btn:active {
-      background-color: #990000;
-    }
-    .yt-btn svg {
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
+      text-align: center;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -95,7 +93,9 @@
 
   <!-- Version 8.6 Updates Card -->
   <div class="update-card">
-    <span class="badge">Latest</span>
+    <div class="badge-container">
+      <span class="badge">Latest</span>
+    </div>
     <div class="version-title">Version 8.6 Update</div>
     <div class="release-date">Released: October 2026</div>
     <ul>
@@ -108,15 +108,14 @@
 
   <!-- How to Use Tutorial Card -->
   <div class="update-card">
-    <span class="badge badge-guide">Guide</span>
+    <div class="badge-container">
+      <span class="badge badge-guide">Guide</span>
+    </div>
     <div class="version-title">How to Use City Cricket Scorer</div>
     <p class="card-desc">Watch our step-by-step video guide to learn ball-by-ball scoring, squad management, and tournament features.</p>
     
     <a href="https://youtu.be/UXPFvbLWvFU" class="yt-btn" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24">
-        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.816zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-      </svg>
-      Watch Tutorial on YouTube
+      ▶ Watch Tutorial on YouTube
     </a>
   </div>
 
